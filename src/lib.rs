@@ -103,17 +103,32 @@ pub mod ctrld;
 #[cfg(feature = "dina")]
 pub mod dina;
 
+#[cfg(feature = "dylex")]
+pub mod dylex;
+
 #[cfg(feature = "envypn")]
 pub mod envypn;
 
 #[cfg(feature = "gohufont")]
 pub mod gohufont;
 
+#[cfg(feature = "gomme")]
+pub mod gomme;
+
 #[cfg(feature = "haxor")]
 pub mod haxor;
 
+#[cfg(feature = "jmk")]
+pub mod jmk;
+
 #[cfg(feature = "kakwa")]
 pub mod kakwa;
+
+#[cfg(feature = "knxt")]
+pub mod knxt;
+
+#[cfg(feature = "lokaltog")]
+pub mod lokaltog;
 
 #[cfg(feature = "mplus")]
 pub mod mplus;
@@ -124,6 +139,12 @@ pub mod orp;
 #[cfg(feature = "peep")]
 pub mod peep;
 
+#[cfg(feature = "phallus")]
+pub mod phallus;
+
+#[cfg(feature = "progsole")]
+pub mod progsole;
+
 #[cfg(feature = "scientifica")]
 pub mod scientifica;
 
@@ -132,6 +153,12 @@ pub mod tamzen;
 
 #[cfg(feature = "terminus")]
 pub mod terminus;
+
+#[cfg(feature = "trisk")]
+pub mod trisk;
+
+#[cfg(feature = "xbmicons")]
+pub mod xbmicons;
 
 /// Constant 1 as NonZeroU8 for initialization
 const ONE: NonZeroU8 = match NonZeroU8::new(1) {

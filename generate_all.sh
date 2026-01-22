@@ -6,23 +6,32 @@ BITMAP_DIR="./fonts/bitmap"
 OUT_DIR="./src"
 
 # Font families to generate
-# Format: name [include_pattern] [exclude_pattern]
+# Format: name[:include_pattern:exclude_pattern]
 FONTS=(
     "artwiz"
     "cherry"
     "creep"
     "ctrld"
     "dina"
+    "dylex"
     "envypn"
     "gohufont"
+    "gomme"
     "haxor"
+    "jmk"
     "kakwa"
+    "knxt"
+    "lokaltog"
     "mplus"
     "orp"
     "peep"
+    "phallus"
+    "progsole"
     "scientifica"
     "tamzen:Tamzen:Powerline"
     "terminus"
+    "trisk"
+    "xbmicons"
 )
 
 for entry in "${FONTS[@]}"; do

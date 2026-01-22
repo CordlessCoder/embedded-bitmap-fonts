@@ -20,16 +20,25 @@ cherry = []
 creep = []
 ctrld = []
 dina = []
+dylex = []
 envypn = []
 gohufont = []
+gomme = []
 haxor = []
+jmk = []
 kakwa = []
+knxt = []
+lokaltog = []
 mplus = []
 orp = []
 peep = []
+phallus = []
+progsole = []
 scientifica = []
 tamzen = []
 terminus = []
+trisk = []
+xbmicons = []
 
 # Enable all fonts
 all-fonts = [
@@ -38,16 +47,25 @@ all-fonts = [
     "creep",
     "ctrld",
     "dina",
+    "dylex",
     "envypn",
     "gohufont",
+    "gomme",
     "haxor",
+    "jmk",
     "kakwa",
+    "knxt",
+    "lokaltog",
     "mplus",
     "orp",
     "peep",
+    "phallus",
+    "progsole",
     "scientifica",
     "tamzen",
     "terminus",
+    "trisk",
+    "xbmicons",
 ]
 
 [dependencies]
