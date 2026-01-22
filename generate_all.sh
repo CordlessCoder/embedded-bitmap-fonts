@@ -2,58 +2,43 @@
 set -e
 
 CODEGEN="./target/release/embedded-bitmap-fonts-codegen"
-BITMAP_DIR="./fonts/tecate-bitmap-fonts/bitmap"
+BITMAP_DIR="./fonts/bitmap"
 OUT_DIR="./src"
 
-# Function to generate a font family
-generate() {
-    local dir="$1"
-    local family="$2"
-    local pattern="${3:-}"
-    local exclude="${4:-}"
+# Font families to generate
+# Format: name [include_pattern] [exclude_pattern]
+FONTS=(
+    "artwiz"
+    "cherry"
+    "creep"
+    "ctrld"
+    "dina"
+    "envypn"
+    "gohufont"
+    "haxor"
+    "kakwa"
+    "mplus"
+    "orp"
+    "peep"
+    "scientifica"
+    "tamzen:Tamzen:Powerline"
+    "terminus"
+)
+
+for entry in "${FONTS[@]}"; do
+    IFS=':' read -r name pattern exclude <<< "$entry"
     
-    echo "Generating $family..."
+    echo "Generating $name..."
     
-    args=(-i "$BITMAP_DIR/$dir" -o "$OUT_DIR" -f "$family")
+    args=(-i "$BITMAP_DIR/$name" -o "$OUT_DIR" -f "$name")
     [ -n "$pattern" ] && args+=(-P "$pattern")
     [ -n "$exclude" ] && args+=(-X "$exclude")
     
     if $CODEGEN "${args[@]}" 2>&1; then
-        echo "  OK: $family"
+        echo "  OK: $name"
     else
-        echo "  FAILED: $family"
+        echo "  FAILED: $name"
     fi
-}
-
-# Generate each font family
-# Format: generate <directory> <module_name> [include_pattern] [exclude_pattern]
-
-generate "tamzen-font" "tamzen" "Tamzen" "Powerline"
-generate "terminus-font-4.39" "terminus" "" ""
-generate "spleen" "spleen" "" ""
-generate "cherry" "cherry" "" ""
-generate "gohufont" "gohufont" "" ""
-generate "scientifica" "scientifica" "" ""
-generate "tewi-font" "tewi" "" ""
-generate "creep" "creep" "" ""
-generate "unscii" "unscii" "" ""
-generate "profont-x11" "profont" "" ""
-generate "ctrld-font" "ctrld" "" ""
-generate "envypn-font" "envypn" "" ""
-generate "dina" "dina" "" ""
-generate "proggy" "proggy" "" ""
-generate "bitocra" "bitocra" "" ""
-generate "artwiz" "artwiz" "" ""
-generate "haxor" "haxor" "" ""
-generate "orp-font" "orp" "" ""
-generate "montecarlo" "montecarlo" "" ""
-generate "zevv-peep" "peep" "" ""
-generate "mplus" "mplus" "" ""
-generate "ohsnap-1.8.0" "ohsnap" "" ""
-generate "leggie" "leggie" "" ""
-generate "tamsyn-font-1.11" "tamsyn" "" ""
-generate "termsyn-1.8.7" "termsyn" "" ""
-generate "kakwa" "kakwa" "" ""
-generate "sq" "sq" "" ""
+done
 
 echo "Done!"
