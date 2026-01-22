@@ -2,8 +2,8 @@
 name = "embedded-bitmap-fonts"
 version = "0.1.0"
 authors = ["ecklf"]
-edition = "2021"
-rust-version = "1.61"
+edition = "2024"
+rust-version = "1.85"
 description = "A comprehensive collection of bitmap fonts no_std environments, with pixel-doubling support"
 keywords = ["embedded", "graphics", "bitmap", "font", "no_std"]
 categories = ["embedded", "graphics", "no-std"]
