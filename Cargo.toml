@@ -4,10 +4,10 @@ version = "0.1.0"
 authors = ["ecklf"]
 edition = "2021"
 rust-version = "1.61"
-description = "A comprehensive collection of bitmap fonts for embedded-graphics, with pixel-doubling support"
+description = "A comprehensive collection of bitmap fonts no_std environments, with pixel-doubling support"
 keywords = ["embedded", "graphics", "bitmap", "font", "no_std"]
 categories = ["embedded", "graphics", "no-std"]
-license = "MIT OR Apache-2.0"
+license = "Apache-2.0"
 readme = "README.md"
 repository = "https://github.com/ecklf/embedded-bitmap-fonts"
 
