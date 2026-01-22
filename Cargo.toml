@@ -1,0 +1,57 @@
+[package]
+name = "embedded-bitmap-fonts"
+version = "0.1.0"
+authors = ["ecklf"]
+edition = "2021"
+rust-version = "1.61"
+description = "A comprehensive collection of bitmap fonts for embedded-graphics, with pixel-doubling support"
+keywords = ["embedded", "graphics", "bitmap", "font", "no_std"]
+categories = ["embedded", "graphics", "no-std"]
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/ecklf/embedded-bitmap-fonts"
+
+[features]
+default = ["tamzen"]
+
+# Font families - each can be enabled independently
+artwiz = []
+cherry = []
+creep = []
+ctrld = []
+dina = []
+envypn = []
+gohufont = []
+haxor = []
+kakwa = []
+mplus = []
+orp = []
+peep = []
+scientifica = []
+tamzen = []
+terminus = []
+
+# Enable all fonts
+all-fonts = [
+    "artwiz",
+    "cherry",
+    "creep",
+    "ctrld",
+    "dina",
+    "envypn",
+    "gohufont",
+    "haxor",
+    "kakwa",
+    "mplus",
+    "orp",
+    "peep",
+    "scientifica",
+    "tamzen",
+    "terminus",
+]
+
+[dependencies]
+embedded-graphics = "0.8"
+
+[workspace]
+members = [".", "codegen"]
