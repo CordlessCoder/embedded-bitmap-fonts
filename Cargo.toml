@@ -10,6 +10,7 @@ categories = ["embedded", "graphics", "no-std"]
 license = "Apache-2.0"
 readme = "README.md"
 repository = "https://github.com/ecklf/embedded-bitmap-fonts"
+exclude = ["fonts/", "codegen/"]
 
 [features]
 default = ["terminus"]
