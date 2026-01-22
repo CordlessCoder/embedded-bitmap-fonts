@@ -9,6 +9,7 @@ OUT_DIR="./src"
 # Format: name[:include_pattern:exclude_pattern]
 FONTS=(
     "artwiz"
+    "bitocra"
     "cherry"
     "creep"
     "ctrld"
@@ -28,8 +29,10 @@ FONTS=(
     "phallus"
     "progsole"
     "scientifica"
+    "spleen"
     "tamzen:Tamzen:Powerline"
     "terminus"
+    "tewi"
     "trisk"
     "xbmicons"
 )

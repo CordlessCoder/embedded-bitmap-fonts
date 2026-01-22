@@ -4,7 +4,7 @@ A comprehensive collection of bitmap fonts for `no_std` environments, designed f
 
 ## Features
 
-- **24 font families** with 118+ font variants
+- **27 font families** with 134 font variants
 - **Pixel-doubling support** - Scale fonts 2x, 3x, or more with zero additional flash cost
 - **No-std compatible** - Works on embedded systems without an allocator
 - **Feature flags** - Include only the fonts you need to minimize binary size
@@ -63,45 +63,47 @@ embedded-bitmap-fonts = { version = "0.1", features = ["terminus", "tamzen", "ch
 embedded-bitmap-fonts = { version = "0.1", features = ["all-fonts"] }
 ```
 
-| Feature | Variants | Sizes | Description |
-|---------|----------|-------|-------------|
-| `artwiz` | 12 | 5x10 - 11x12 | Artistic bitmap fonts (drift, lime, cure, etc.) |
-| `cherry` | 6 | 6x10 - 7x13 | Clean small fonts with bold variants |
-| `creep` | 1 | 7x12 | Minimal monospace font |
-| `ctrld` | 6 | 6x10 - 8x16 | Fixed-width programming fonts |
-| `dina` | 4 | 6x10 - 8x16 | Popular programming font |
-| `dylex` | 9 | 6x10 - 14x14 | Multiple sizes with bold/oblique |
-| `envypn` | 2 | 7x13, 7x15 | Clean programming font |
-| `gohufont` | 4 | 6x11, 8x14 | Popular terminal font with unicode |
-| `gomme` | 1 | 10x20 | Single clean font |
-| `haxor` | 6 | 6x11 - 9x21 | Hacker-style fonts |
-| `jmk` | 13 | 5x10 - 12x24 | Large neep font collection |
-| `kakwa` | 2 | 6x12 | Simple fonts with bold |
-| `knxt` | 1 | 9x20 | Single tall font |
-| `lokaltog` | 3 | 6x10 - 11x11 | Fixed fonts with symbols |
-| `mplus` | 10 | 6x13 - 11x14 | Japanese M+ bitmap fonts |
-| `orp` | 2 | 6x12 | Clean fonts with bold |
-| `peep` | 3 | 7x14 - 10x20 | Zevv peep fonts |
-| `phallus` | 2 | 10x12, 10x15 | Lemon fonts |
-| `progsole` | 1 | 6x9 | Compact programming font |
-| `scientifica` | 2 | 5x12 | Minimal scientific font |
-| `tamzen` | 14 | 5x9 - 10x20 | Popular terminal font (default) |
-| `terminus` | 18 | 6x12 - 16x32 | Highly readable terminal font |
-| `trisk` | 2 | 8x13, 8x14 | Triskweline fonts |
-| `xbmicons` | 1 | 9x12 | Icon font |
+| Feature | Variants | Available Fonts |
+|---------|----------|-----------------|
+| `artwiz` | 12 | `FONT_5x10`, `FONT_6x10`, `FONT_6x11`, `FONT_6x13`, `FONT_7x14`, `FONT_8x8`, `FONT_8x10`, `FONT_8x16`, `FONT_9x9`, `FONT_9x10`, `FONT_10x10_BOLD`, `FONT_11x12` |
+| `bitocra` | 7 | `FONT_4x4`, `FONT_4x5`, `FONT_4x7`, `FONT_6x10`, `FONT_6x11`, `FONT_7x11`, `FONT_7x13` |
+| `cherry` | 6 | `FONT_6x10`, `FONT_6x10_BOLD`, `FONT_6x11`, `FONT_6x11_BOLD`, `FONT_7x13`, `FONT_7x13_BOLD` |
+| `creep` | 1 | `FONT_7x12` |
+| `ctrld` | 6 | `FONT_6x10`, `FONT_6x10_BOLD`, `FONT_7x13`, `FONT_7x13_BOLD`, `FONT_8x16`, `FONT_8x16_BOLD` |
+| `dina` | 4 | `FONT_6x10`, `FONT_7x13`, `FONT_7x15`, `FONT_8x16` |
+| `dylex` | 9 | `FONT_6x10`, `FONT_6x10_BOLD`, `FONT_7x13`, `FONT_7x13_BOLD`, `FONT_10x20`, `FONT_10x20_BOLD`, `FONT_14x14`, `FONT_14x14_BOLD`, `FONT_14x20` |
+| `envypn` | 2 | `FONT_7x13`, `FONT_7x15` |
+| `gohufont` | 4 | `FONT_6x11`, `FONT_6x11_BOLD`, `FONT_8x14`, `FONT_8x14_BOLD` |
+| `gomme` | 1 | `FONT_10x20` |
+| `haxor` | 6 | `FONT_6x11`, `FONT_7x13`, `FONT_8x14`, `FONT_8x17`, `FONT_9x15`, `FONT_9x21` |
+| `jmk` | 13 | `FONT_5x10`, `FONT_5x11`, `FONT_5x11_BOLD`, `FONT_6x11`, `FONT_6x11_BOLD`, `FONT_6x13`, `FONT_6x13_BOLD`, `FONT_8x15`, `FONT_8x15_BOLD`, `FONT_10x20`, `FONT_10x20_BOLD`, `FONT_12x24`, `FONT_12x24_BOLD` |
+| `kakwa` | 2 | `FONT_6x12`, `FONT_6x12_BOLD` |
+| `knxt` | 1 | `FONT_9x20` |
+| `lokaltog` | 3 | `FONT_6x10`, `FONT_6x12`, `FONT_11x11` |
+| `mplus` | 10 | `FONT_6x13`, `FONT_6x13_BOLD`, `FONT_7x10`, `FONT_7x11`, `FONT_8x11_BOLD`, `FONT_9x11`, `FONT_9x11_BOLD`, `FONT_10x14`, `FONT_11x14_BOLD`, `FONT_27x29` |
+| `orp` | 2 | `FONT_6x12`, `FONT_6x12_BOLD` |
+| `peep` | 3 | `FONT_7x14`, `FONT_8x16`, `FONT_10x20` |
+| `phallus` | 2 | `FONT_10x12`, `FONT_10x15` |
+| `progsole` | 1 | `FONT_6x9` |
+| `scientifica` | 2 | `FONT_5x12`, `FONT_5x12_BOLD` |
+| `spleen` | 6 | `FONT_5x8`, `FONT_6x12`, `FONT_8x16`, `FONT_12x24`, `FONT_16x32`, `FONT_32x64` |
+| `tamzen` | 14 | `FONT_5x9`, `FONT_5x9_BOLD`, `FONT_6x12`, `FONT_6x12_BOLD`, `FONT_7x13`, `FONT_7x13_BOLD`, `FONT_7x14`, `FONT_7x14_BOLD`, `FONT_8x15`, `FONT_8x15_BOLD`, `FONT_8x16`, `FONT_8x16_BOLD`, `FONT_10x20`, `FONT_10x20_BOLD` |
+| `terminus` | 18 | `FONT_6x12`, `FONT_6x12_BOLD`, `FONT_8x14`, `FONT_8x14_BOLD`, `FONT_8x16`, `FONT_8x16_BOLD`, `FONT_10x18`, `FONT_10x18_BOLD`, `FONT_10x20`, `FONT_10x20_BOLD`, `FONT_11x22`, `FONT_11x22_BOLD`, `FONT_12x24`, `FONT_12x24_BOLD`, `FONT_14x28`, `FONT_14x28_BOLD`, `FONT_16x32`, `FONT_16x32_BOLD` |
+| `tewi` | 4 | `FONT_5x5`, `FONT_5x5_BOLD`, `FONT_7x13_BOLD`, `FONT_13x12` |
+| `trisk` | 2 | `FONT_8x13`, `FONT_8x14_BOLD` |
+| `xbmicons` | 1 | `FONT_9x12` |
 
-## Font Generation
+**Total: 134 fonts across 27 families**
+
+## Contributing 
 
 Fonts are generated from BDF (Bitmap Distribution Format) files using a custom codegen tool.
 
 ### Prerequisites
 
 ```bash
-# Clone the repository
 git clone https://github.com/ecklf/embedded-bitmap-fonts
 cd embedded-bitmap-fonts
-
-# Build the codegen tool
 cargo build --release -p embedded-bitmap-fonts-codegen
 ```
 
@@ -140,7 +142,7 @@ cargo build --release -p embedded-bitmap-fonts-codegen
 
 ## Font Sources
 
-Fonts are sourced from the [Tecate/bitmap-fonts](https://github.com/Tecate/bitmap-fonts) collection. See `fonts/TECATE_README.md` for the original documentation.
+Fonts are sourced from the [Tecate/bitmap-fonts](https://github.com/Tecate/bitmap-fonts) collection.
 
 ## License
 

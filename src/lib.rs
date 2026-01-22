@@ -91,6 +91,9 @@ use embedded_graphics::{
 #[cfg(feature = "artwiz")]
 pub mod artwiz;
 
+#[cfg(feature = "bitocra")]
+pub mod bitocra;
+
 #[cfg(feature = "cherry")]
 pub mod cherry;
 
@@ -148,11 +151,17 @@ pub mod progsole;
 #[cfg(feature = "scientifica")]
 pub mod scientifica;
 
+#[cfg(feature = "spleen")]
+pub mod spleen;
+
 #[cfg(feature = "tamzen")]
 pub mod tamzen;
 
 #[cfg(feature = "terminus")]
 pub mod terminus;
+
+#[cfg(feature = "tewi")]
+pub mod tewi;
 
 #[cfg(feature = "trisk")]
 pub mod trisk;

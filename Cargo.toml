@@ -16,6 +16,7 @@ default = ["terminus"]
 
 # Font families - each can be enabled independently
 artwiz = []
+bitocra = []
 cherry = []
 creep = []
 ctrld = []
@@ -35,14 +36,17 @@ peep = []
 phallus = []
 progsole = []
 scientifica = []
+spleen = []
 tamzen = []
 terminus = []
+tewi = []
 trisk = []
 xbmicons = []
 
 # Enable all fonts
 all-fonts = [
     "artwiz",
+    "bitocra",
     "cherry",
     "creep",
     "ctrld",
@@ -62,8 +66,10 @@ all-fonts = [
     "phallus",
     "progsole",
     "scientifica",
+    "spleen",
     "tamzen",
     "terminus",
+    "tewi",
     "trisk",
     "xbmicons",
 ]
